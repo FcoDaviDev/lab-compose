@@ -35,12 +35,12 @@ cd ~/lab5-compose
 
 ---
 
-## 2) Checkpoint A — Criar `compose.yml`
+## 2) Checkpoint A — Criar `docker-compose.yml`
 
 Crie com `vim`:
 
 ```bash
-vim compose.yml
+vim docker-compose.yml
 ```
 
 Cole:
@@ -69,7 +69,7 @@ services:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
 ```
 
-**Evidência (print):** `ls -l` mostrando `compose.yml`
+**Evidência (print):** `ls -l` mostrando `docker-compose.yml`
 
 ---
 
@@ -174,7 +174,7 @@ docker compose down
 ### 1) Healthcheck falhando por falta de `wget`
 Se o healthcheck falhar, substitua por um teste simples com `nc`:
 
-No `compose.yml` em `whoami`:
+No `docker-compose.yml` em `whoami`:
 
 ```yaml
 healthcheck:
